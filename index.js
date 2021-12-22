@@ -55,16 +55,10 @@ async function getAddresses() {
     const address = await nftContract.ownerOf(count);
     allAddresses.push(address);
     console.log(count, address);
+    fs.writeFileSync('./addresses.json', JSON.stringify([...new Set(allAddresses)], null, 4))
     count++;
   }
   return [...new Set(allAddresses)];
 }
 
-function saveJSON(path, json) {
-  fs.writeFileSync(path, JSON.stringify(json, null, 4));
-}
-
-getAddresses()
-.then((data)=>{
-  fs.writeFileSync('./addresses.json', JSON.stringify(data, null, 4));
-})
+getAddresses();
