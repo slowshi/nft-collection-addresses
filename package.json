@@ -1,0 +1,25 @@
+{
+  "name": "nft-collection-addresses",
+  "version": "1.0.0",
+  "description": "Get list of owners in an NFT collection",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slowshi/nft-collection-addresses.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slowshi/nft-collection-addresses/issues"
+  },
+  "homepage": "https://github.com/slowshi/nft-collection-addresses#readme",
+  "dependencies": {
+    "ethers": "^5.5.2",
+    "fs": "0.0.1-security"
+  }
+}
